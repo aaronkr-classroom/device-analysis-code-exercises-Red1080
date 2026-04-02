@@ -1,38 +1,36 @@
-# data_types.py
-a = 10 #int
-b= 3.14 # float
-c = "hello" # str
-d = True # bool
+#list
+my_list1=[1,2,'a',"hello"]
+my_list2=[1,'a',3,67]
+my_list1[1]=67
+my_list2.append(89)
 
-print(f"{a} is a {type(a)}")
-print(f"{b} is a {type(b)}")
-print(f"{c} is a {type(c)}")
-print(f"{d} is a {type(d)}")
+#tuple(cant modify)
+my_t1=('Arnold',1984)
+my_t23=(1991,2003)
+print(my_t23[0])
+my_t23=(100,1000)
 
-# Str
-e = 'Red'
-f = "K"
-name = e + " " + f
+#dictionary
+my_dict={
+    "name":"Red",
+    "list":my_list1,
+    "tup":(1,2,3),
+    }
+my_dict['tup']=(1,4,5)
+my_dict['name']="brian"
 
-g = name + " said, \"It's a beautiful day!"
-h = '"How \'ya doin\' today?"\n\t"Good!"'
-print(g, "\n",h)
+#set
+set1={1,2,'a',"hello"}
+set2={2,3,'b',"hello"}
+union_set= set1 | set2
+intersection_set= set1 & set2
+diff_set = set1-set2
+sym_diff_set= set1^set2
 
-# bool - only False 0 or "" is False
-
-i = True
-j = False
-k = bool(-1)
-l = bool(a)
-m = bool("")
-n = bool(0)
-o = bool(g)
-print(i,j,k,l,m,n,o)
-
-
-
-
-
+print('u:',union_set)
+print('i:',intersection_set)
+print('d:',diff_set)
+print('sd:',sym_diff_set)
 
 
 
